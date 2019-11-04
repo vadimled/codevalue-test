@@ -6,8 +6,9 @@
   }
 
   .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
+    background-color: #9babc9;
+    width: 100%;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,11 +26,28 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    width: 100%;
+    height: 60px;
   }
   .main-page-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    border: 1px solid red;
     justify-content: center;
-   }
+    width: 100%;
+    height: 100vh;
+
+    nav{
+      width: 50%;
+      height: 100%;
+      border: 1px solid #1415ff;
+    }
+
+    article{
+      width: 50%;
+      height: 100%;
+      border: 1px solid #49ff23;
+    }
+  }
 }
