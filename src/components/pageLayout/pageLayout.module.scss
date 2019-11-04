@@ -1,5 +1,8 @@
-.page-wrapper :global{
-  height: calc(100vh - 96px) !important;
-  width: calc(100vw - 24px) !important;
-
+.page-wrapper{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  border: 2px solid black;
 }
