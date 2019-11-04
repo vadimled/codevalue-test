@@ -6,7 +6,7 @@
   }
 
   .App-header {
-    background-color: #9babc9;
+    background-color: #b4c6e9;
     width: 100%;
     min-height: 10vh;
     display: flex;
@@ -28,6 +28,7 @@
     justify-content: left;
     width: 100%;
     height: 60px;
+    margin-left: 30px;
   }
   .main-page-content {
     display: flex;
@@ -48,6 +49,24 @@
       width: 50%;
       height: 100%;
       border: 1px solid #49ff23;
+    }
+  }
+
+  .ant-btn.ant-btn-primary{
+    width: 150px !important;
+    height: 46px !important;
+    border-radius: 6px !important;
+    font-size: 16px;
+    color: white;
+    background-color: #1689db;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #175ea7;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }

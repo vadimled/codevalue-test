@@ -14,7 +14,7 @@ class App extends Component {
         <PageLayout>
           <header className="App-header">
             <div className="add-new-item-wrapper">
-              <Button type="primary" onClick={this.handleDoSomething}>
+              <Button type="primary" onClick={this.handleDoSomething} size="large">
                 Do something
               </Button>
             </div>
