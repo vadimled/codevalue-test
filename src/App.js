@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import style from "./App.module.scss";
 import PageLayout from "./components/pageLayout";
-import { Button } from "antd";
+import { Button, Input } from "antd";
 
+const { Search } = Input;
 class App extends Component {
   handleDoSomething = e => {
     console.log(e.target);
@@ -14,9 +15,19 @@ class App extends Component {
         <PageLayout>
           <header className="App-header">
             <div className="add-new-item-wrapper">
-              <Button type="primary" onClick={this.handleDoSomething} size="large">
+              <Button
+                type="primary"
+                onClick={this.handleDoSomething}
+                size="large"
+              >
                 Do something
               </Button>
+              <div className="search-item-wrapper">
+                <Search
+                  placeholder="input search text"
+                  onSearch={value => console.log(value)}
+                />
+              </div>
             </div>
           </header>
           <div className="main-page-content">
