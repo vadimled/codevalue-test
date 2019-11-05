@@ -2,14 +2,24 @@ import React, { Component } from "react";
 import style from "./App.module.scss";
 import PageLayout from "./components/pageLayout";
 import { Button, Input } from "antd";
+import {connect} from "react-redux";
+import {fetchItems} from "./store/actions/registerActions";
 
 const { Search } = Input;
 class App extends Component {
+  constructor(props) {
+    super(props);
+    props.fetchItems();
+  }
+  
+  
   handleDoSomething = e => {
     console.log(e.target);
   };
 
   render() {
+    const { data } = this.props;
+    console.log(data);
     return (
       <div className={style["App"]}>
         <PageLayout>
@@ -40,4 +50,20 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    data: state.currData.data,
+  };
+};
+
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchItems: () => dispatch(fetchItems())
+  };
+}
+
+export default  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App);
+
