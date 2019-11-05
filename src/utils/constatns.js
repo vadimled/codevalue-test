@@ -1,4 +1,3 @@
 export const THEME_COLORS = {
-  cta: "",
-  Border: "#DAE1E6"
+  border: "#DAE1E6"
 };
