@@ -2,7 +2,8 @@ import actionsTypes from '../actionsTypes'
 import createReducer from '../reducers/createReducer'
 
 const initialState = {
-  data: []
+  data: [],
+  selectedProductId: null
 };
 
 const headerReducer = createReducer(initialState, {

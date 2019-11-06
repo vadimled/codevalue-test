@@ -3,9 +3,9 @@ import style from "./product.module.scss";
 import {Button} from "antd";
 
 function Product({data, handleDelete, handleEdit}) {
-  const {description, name} = data;
+  const {description, name, id} = data;
   return (
-    <li className={style["product-wrapper"]} onClick={handleEdit}>
+    <li className={style["product-wrapper"]} onClick={() => handleEdit(id)}>
       <div className="product-content">
         <div className="image"/>
         <div className="description-wrapper">

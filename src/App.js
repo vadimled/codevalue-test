@@ -5,6 +5,7 @@ import { Button, Input } from "antd";
 import {connect} from "react-redux";
 import {fetchItems} from "./store/actions/registerActions";
 import ProductsContainer from "./components/productsContainer";
+import ProductDetailsContainer from "./components/productDetailesContainer";
 
 const { Search } = Input;
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
   }
   
   
-  handleDoSomething = e => {
+  handleAddProduct = e => {
     console.log(e.target);
   };
 
@@ -28,7 +29,7 @@ class App extends Component {
             <div className="add-new-item-wrapper">
               <Button
                 type="primary"
-                onClick={this.handleDoSomething}
+                onClick={this.handleAddProduct}
                 size="large"
               >
                 + Add
@@ -45,7 +46,9 @@ class App extends Component {
             <nav>
               <ProductsContainer />
             </nav>
-            <article></article>
+            <article>
+              <ProductDetailsContainer />
+            </article>
           </div>
         </PageLayout>
       </div>

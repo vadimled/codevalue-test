@@ -1,8 +1,10 @@
 import React from 'react';
+import style from "./productDetailes.module.scss";
 import {Button, Input} from "antd";
+
 const { TextArea } = Input;
 
-function ProductDetails({nameValue, descriptionValue, priceValue, submit}) {
+function ProductDetails({nameValue, descriptionValue, priceValue, submit, onChange}) {
   
   const isSubmitEnabled = () => {
     return nameValue && descriptionValue && priceValue;
