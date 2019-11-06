@@ -3,7 +3,13 @@ import types from "../actionsTypes";
 import { setItems } from "../actions/registerActions";
 
 let data = [
-  {name: "Dan"}
+  {
+    name: "Dan",//string, up to 30 characters, mandatory
+    id: 4567,
+    description:"", //(string, up to 200 characters, optional)
+    price: 1,// (number, larger than zero, mandatory)c
+    creationDate: new Date()// (Date, mandatory)
+  },
 ];
 
 export function* fetchItems(action) {
