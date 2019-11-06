@@ -34,6 +34,7 @@ const headerReducer = createReducer(initialState, {
       data: newData
     }*/
   },
+  
   [actionsTypes.SELECT_ITEM]: (state, {payload}) => {
     return {
       ...state,
