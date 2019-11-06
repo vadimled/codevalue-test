@@ -31,7 +31,7 @@ class App extends Component {
                 onClick={this.handleDoSomething}
                 size="large"
               >
-                Do something
+                + Add
               </Button>
               <div className="search-item-wrapper">
                 <Search
