@@ -6,7 +6,7 @@ let data = [
   {
     name: "Dan",//string, up to 30 characters, mandatory
     id: 4567,
-    description:"", //(string, up to 200 characters, optional)
+    description:"sorting of evidence table  should be by date descending", //(string, up to 200 characters, optional)
     price: 1,// (number, larger than zero, mandatory)c
     creationDate: new Date()// (Date, mandatory)
   },

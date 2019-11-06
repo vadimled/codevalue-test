@@ -4,6 +4,7 @@ import PageLayout from "./components/pageLayout";
 import { Button, Input } from "antd";
 import {connect} from "react-redux";
 import {fetchItems} from "./store/actions/registerActions";
+import ProductsContainer from "./components/productsContainer";
 
 const { Search } = Input;
 class App extends Component {
@@ -41,7 +42,9 @@ class App extends Component {
             </div>
           </header>
           <div className="main-page-content">
-            <nav></nav>
+            <nav>
+              <ProductsContainer />
+            </nav>
             <article></article>
           </div>
         </PageLayout>
