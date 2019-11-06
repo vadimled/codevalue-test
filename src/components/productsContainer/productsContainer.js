@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {deleteItem, editItem} from "../../store/actions/registerActions";
+import {deleteItem, selectedItem} from "../../store/actions/registerActions";
 import {connect} from "react-redux";
 import style from "./productsContainer.module.scss";
 import Product from "../product/product";
@@ -10,8 +10,8 @@ class ProductsContainer extends Component {
     this.props.deleteItem(id);
   };
   
-  onEditProduct = (data) => {
-    this.props.editItem(data);
+  onSelectProduct = (id) => {
+    this.props.selectedItem(id);
   };
   
   render() {
@@ -21,7 +21,7 @@ class ProductsContainer extends Component {
         <Product
           data={product}
           handleDelete={this.onDeleteProduct}
-          handleEdit={this.onEditProduct}/>
+          handleSelect={this.onSelectProduct}/>
         ))}
       </ul>
     </div>;
@@ -37,7 +37,7 @@ const mapStateToProps = state => {
 function mapDispatchToProps(dispatch) {
   return {
     deleteItem: (id) => dispatch(deleteItem(id)),
-    editItem: (id) => dispatch(editItem(id)),
+    selectedItem: (id) => dispatch(selectedItem(id)),
   };
 }
 

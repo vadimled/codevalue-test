@@ -28,6 +28,13 @@ export const editItem = data =>{
   };
 };
 
+export const selectedItem = data =>{
+  return{
+    type: types.SELECT_ITEM,
+    payload: data
+  };
+};
+
 export const deleteItem = data =>{
   return{
     type: types.DELETE_ITEM,

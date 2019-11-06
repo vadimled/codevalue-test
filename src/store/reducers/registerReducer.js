@@ -33,6 +33,12 @@ const headerReducer = createReducer(initialState, {
       ...state,
       data: newData
     }*/
+  },
+  [actionsTypes.SELECT_ITEM]: (state, {payload}) => {
+    return {
+      ...state,
+      selectedProductId: payload
+    }
   }
 });
 
