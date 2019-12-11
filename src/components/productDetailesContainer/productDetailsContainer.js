@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import ProductDetails from "../productDetailes";
-import style from "./productDetailesContainer.module.css";
+import style from "./productDetailesContainer.module.scss";
 
 class ProductDetailsContainer extends Component {
   handleSubmit = e => {
@@ -17,13 +17,15 @@ class ProductDetailsContainer extends Component {
     
     return id &&
       (<div className={style["product-details-container-wrapper"]}>
-        <ProductDetails
-          descriptionValue={"uteiuqrEF;"}
-          nameValue={"DAN"}
-          priceValue={23}
-          submit={this.handleSubmit}
-          onChange={this.handleOnChange}
-        />
+        <ul>
+          <ProductDetails
+            descriptionValue={"uteiuqrEF;"}
+            nameValue={"DAN"}
+            priceValue={23}
+            submit={this.handleSubmit}
+            onChange={this.handleOnChange}
+          />
+        </ul>
       </div>)
   }
 }

@@ -1,4 +1,4 @@
-.product-container-wrapper :global{
+.product-container-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,5 +10,6 @@
     width: 100%;
     height: 100%;
     padding: 12px;
+    border: red 1px solid;
   }
 }

@@ -1,7 +1,12 @@
-.product-details-container-wrapper :global{
+.product-details-container-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+
+  ul {
+    border: #0816ff 1px solid;
+  }
+
 }
